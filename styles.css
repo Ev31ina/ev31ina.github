@@ -6,19 +6,20 @@ p, h1, h4{
     color:rgb(18, 7, 70);
     box-shadow: 20px 10px 40 px;
     padding: 20px;
-    background-color: rgb(106, 121, 153);
+    background-color: rgb(148, 155, 170);
 }
 #section p {
     color:rgb(31, 70, 128);
     font-size: 1.5em;
-    background-color: rgb(112, 127, 139);
+    background-color: rgb(148, 155, 170);
 }
 h1 {
     margin: 50px;
 }
 header {
-    background-color: rgb(112, 127, 139);
+    background-color: rgb(148, 155, 170);
     border-radius: 10px;
+    size: 80%;
 }
 nav a {
     color:rgb(59, 27, 148)
@@ -28,12 +29,12 @@ img a {
 }
 .nav-menu {
     display: flex;
-    gap: 20p10vw;
+    gap: 20px;
     list-style-type: none;
 }
 .nav-menu li a{
     text-decoration: none;
-    color: white
+    color: rgb(12, 21, 190)
 }
 .header .container {
     display: flex;
@@ -45,7 +46,54 @@ img a {
     gap: 30px;
     flex-wrap: wrap;
 }
-.feature-card [
+.feature-card {
     flex: 1;
     min-width: 250px;
-]
+}
+@media (max-width: 1024px) {
+    .gallery-container {
+        grid-template-columns. repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .feature-card {
+        flex: 1 1 calc(50%=20px)
+    }
+}
+@media (max_width: 425px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .nav menu li {
+        width: 100%;
+    }
+    .nav menu a {
+        display: block;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    .main, .gallery, .features {
+        padding: 40px, 15px;
+    }
+}
+.nav-menu:hover {
+    background-color: rgb(66, 53, 187);
+    background: linear-gradient(rgb(179, 171, 224), rgb(204, 205, 211));
+    font-size: 2om;
+    color: white;
+}
+.feature-cardsr:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow:0 10px 20px rgb(0 0 0 0.15);
+}
+@keyframes pulse {
+    0% {transform: scale(1); }
+    50% {transform: scale(1.043); }
+    100% {transform: scale(1); }
+}
+.nav-menu {
+    animation: pulse 2s infinite;
+}
