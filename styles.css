@@ -91,9 +91,12 @@ img a {
 }
 @keyframes pulse {
     0% {transform: scale(1); }
-    50% {transform: scale(1.043); }
+    50% {transform: scale(1.0053); }
     100% {transform: scale(1); }
 }
-.nav-menu {
+.feature-card {
     animation: pulse 2s infinite;
+}
+.vsm {
+    background-color: rgb(148, 155, 170);
 }
